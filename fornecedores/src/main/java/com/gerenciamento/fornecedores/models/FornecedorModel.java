@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_fornecedores")
-public class ForncedorModel {
+public class FornecedorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,10 +17,10 @@ public class ForncedorModel {
     private String cnpj;
     private String contato;
 
-    public ForncedorModel() {
+    public FornecedorModel() {
     }
 
-    public ForncedorModel(Long id, String nome, String cnpj, String contato) {
+    public FornecedorModel(Long id, String nome, String cnpj, String contato) {
         this.id = id;
         this.nome = nome;
         this.cnpj = cnpj;
@@ -62,7 +62,7 @@ public class ForncedorModel {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        ForncedorModel that = (ForncedorModel) o;
+        FornecedorModel that = (FornecedorModel) o;
         return Objects.equals(id, that.id);
     }
 
